@@ -1,0 +1,330 @@
+# kruegge82\otto\OrdersV4Api
+
+
+
+All URIs are relative to https://api.otto.market, except if the operation defines another base path.
+
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**ordersV4CancelPartnerOrderPositionItems()**](OrdersV4Api.md#ordersV4CancelPartnerOrderPositionItems) | **POST** /v4/orders/{salesOrderId}/positionItems/{positionItemIds}/cancellation | Cancel specific position items of an order |
+| [**ordersV4CancelPartnerOrders()**](OrdersV4Api.md#ordersV4CancelPartnerOrders) | **POST** /v4/orders/{salesOrderId}/cancellation | Cancel all position items of an order |
+| [**ordersV4FindPartnerOrders()**](OrdersV4Api.md#ordersV4FindPartnerOrders) | **GET** /v4/orders | List of orders filtered by fulfillment state |
+| [**ordersV4GetPartnerOrderByOrderNumber()**](OrdersV4Api.md#ordersV4GetPartnerOrderByOrderNumber) | **GET** /v4/orders/{orderNumber} | Get an order via order number |
+| [**ordersV4GetPartnerOrderBySalesOrderId()**](OrdersV4Api.md#ordersV4GetPartnerOrderBySalesOrderId) | **GET** /v4/orders/{salesOrderId} | Get an order via sales order id |
+
+
+## `ordersV4CancelPartnerOrderPositionItems()`
+
+```php
+ordersV4CancelPartnerOrderPositionItems($sales_order_id, $position_item_ids)
+```
+
+Cancel specific position items of an order
+
+Allows to cancel specific position items of an order by salesOrderId and positionItemIds.<br>Note: Only position items in state PROCESSABLE can be cancelled. Position items in state CANCELLED_BY_PARTNER will be ignored. If any position item is in a different state the operation will leave the whole order unchanged and respond with a conflict error message.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer (JWT) authorization: bearerAuth
+$config = kruegge82\otto\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new kruegge82\otto\Api\OrdersV4Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$sales_order_id = 'sales_order_id_example'; // string | The salesOrderId of the order
+$position_item_ids = 'position_item_ids_example'; // string | The positionItemIds of the order to cancel
+
+try {
+    $apiInstance->ordersV4CancelPartnerOrderPositionItems($sales_order_id, $position_item_ids);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersV4Api->ordersV4CancelPartnerOrderPositionItems: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sales_order_id** | **string**| The salesOrderId of the order | |
+| **position_item_ids** | **string**| The positionItemIds of the order to cancel | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `ordersV4CancelPartnerOrders()`
+
+```php
+ordersV4CancelPartnerOrders($sales_order_id)
+```
+
+Cancel all position items of an order
+
+Allows to cancel all position items of one or more orders by salesOrderId.<br>Note: Only position items in state PROCESSABLE can be cancelled. Position items in different states will be ignored. If no position item can be cancelled the operation will respond with a conflict error message.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer (JWT) authorization: bearerAuth
+$config = kruegge82\otto\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new kruegge82\otto\Api\OrdersV4Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$sales_order_id = 'sales_order_id_example'; // string | The salesOrderIds of the orders to cancel
+
+try {
+    $apiInstance->ordersV4CancelPartnerOrders($sales_order_id);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersV4Api->ordersV4CancelPartnerOrders: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sales_order_id** | **string**| The salesOrderIds of the orders to cancel | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `ordersV4FindPartnerOrders()`
+
+```php
+ordersV4FindPartnerOrders($from_date, $from_order_date, $to_order_date, $fulfillment_status, $limit, $order_direction, $order_column_type, $mode, $nextcursor): \kruegge82\otto\Model\PartnerOrderListOrdersV4
+```
+
+List of orders filtered by fulfillment state
+
+Retrieve orders sorted by order date from oldest to newest. The number of returned orders is limited to 128; cursor based pagination is supported.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer (JWT) authorization: bearerAuth
+$config = kruegge82\otto\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new kruegge82\otto\Api\OrdersV4Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$from_date = 2019-08-01T01:00:00+02:00; // string | Defines earliest change date (ISO 8601) the returned orders should have
+$from_order_date = 2020-07-01T00:00:00+02:00; // string | Only orders newer than the date specified (ISO 8601) will be returned
+$to_order_date = 2020-07-01T23:59:59+02:00; // string | Only orders older than the date specified (ISO 8601) will be returned
+$fulfillment_status = PROCESSABLE&fulfillmentStatus=CANCELLED_BY_MARKETPLACE; // string | <br>ANNOUNCED: Orders with at least one position item in state ANNOUNCED<br>PROCESSABLE: Orders with at least one position item in state PROCESSABLE and none in ANNOUNCED<br>SENT: Orders with at least one position item in state SENT and none in either ANNOUNCED or PROCESSABLE<br>RETURNED: Orders with at least one position item in state RETURNED and none in either ANNOUNCED, PROCESSABLE, or SENT<br>CANCELLED_BY_PARTNER: Orders with at least one position item in state CANCELLED_BY_PARTNER<br>CANCELLED_BY_MARKETPLACE: Orders with at least one position item in state CANCELLED_BY_MARKETPLACE<br><br>If no state is provided, orders in all possible states are returned.<br>Several values can be passed; it will return a combination of these states without duplicates.<br>Also see parameter 'mode'.
+$limit = 'limit_example'; // string | The maximum amount of orders to return. The maximum value is 256
+$order_direction = 'order_direction_example'; // string | Sort result by 'orderColumnType' in ASCending or DESCending order
+$order_column_type = 'order_column_type_example'; // string | The column on which to apply 'orderDirection' parameter
+$mode = 'mode_example'; // string | In search mode AT_LEAST_ONE orders with at least one  position item in given 'fulfillmentStatus' will always be returned
+$nextcursor = eyJmZiI6MTU5NDg5NDQ3MTA1OCwicGlmIjoiNDcxM; // string | Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is 'limit'<br><br>Note: Only the cursor string is required - not the whole link
+
+try {
+    $result = $apiInstance->ordersV4FindPartnerOrders($from_date, $from_order_date, $to_order_date, $fulfillment_status, $limit, $order_direction, $order_column_type, $mode, $nextcursor);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersV4Api->ordersV4FindPartnerOrders: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **from_date** | **string**| Defines earliest change date (ISO 8601) the returned orders should have | [optional] |
+| **from_order_date** | **string**| Only orders newer than the date specified (ISO 8601) will be returned | [optional] |
+| **to_order_date** | **string**| Only orders older than the date specified (ISO 8601) will be returned | [optional] |
+| **fulfillment_status** | **string**| &lt;br&gt;ANNOUNCED: Orders with at least one position item in state ANNOUNCED&lt;br&gt;PROCESSABLE: Orders with at least one position item in state PROCESSABLE and none in ANNOUNCED&lt;br&gt;SENT: Orders with at least one position item in state SENT and none in either ANNOUNCED or PROCESSABLE&lt;br&gt;RETURNED: Orders with at least one position item in state RETURNED and none in either ANNOUNCED, PROCESSABLE, or SENT&lt;br&gt;CANCELLED_BY_PARTNER: Orders with at least one position item in state CANCELLED_BY_PARTNER&lt;br&gt;CANCELLED_BY_MARKETPLACE: Orders with at least one position item in state CANCELLED_BY_MARKETPLACE&lt;br&gt;&lt;br&gt;If no state is provided, orders in all possible states are returned.&lt;br&gt;Several values can be passed; it will return a combination of these states without duplicates.&lt;br&gt;Also see parameter &#39;mode&#39;. | [optional] |
+| **limit** | **string**| The maximum amount of orders to return. The maximum value is 256 | [optional] |
+| **order_direction** | **string**| Sort result by &#39;orderColumnType&#39; in ASCending or DESCending order | [optional] |
+| **order_column_type** | **string**| The column on which to apply &#39;orderDirection&#39; parameter | [optional] |
+| **mode** | **string**| In search mode AT_LEAST_ONE orders with at least one  position item in given &#39;fulfillmentStatus&#39; will always be returned | [optional] |
+| **nextcursor** | **string**| Cursor for paging requests. If a next cursor is provided, the only other request parameter being considered is &#39;limit&#39;&lt;br&gt;&lt;br&gt;Note: Only the cursor string is required - not the whole link | [optional] |
+
+### Return type
+
+[**\kruegge82\otto\Model\PartnerOrderListOrdersV4**](../Model/PartnerOrderListOrdersV4.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `ordersV4GetPartnerOrderByOrderNumber()`
+
+```php
+ordersV4GetPartnerOrderByOrderNumber($order_number): \kruegge82\otto\Model\PartnerOrderOrdersV4
+```
+
+Get an order via order number
+
+Fetch a single order by its unique order number.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer (JWT) authorization: bearerAuth
+$config = kruegge82\otto\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new kruegge82\otto\Api\OrdersV4Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$order_number = 'order_number_example'; // string
+
+try {
+    $result = $apiInstance->ordersV4GetPartnerOrderByOrderNumber($order_number);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersV4Api->ordersV4GetPartnerOrderByOrderNumber: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **order_number** | **string**|  | |
+
+### Return type
+
+[**\kruegge82\otto\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `ordersV4GetPartnerOrderBySalesOrderId()`
+
+```php
+ordersV4GetPartnerOrderBySalesOrderId($sales_order_id): \kruegge82\otto\Model\PartnerOrderOrdersV4
+```
+
+Get an order via sales order id
+
+Fetch a single order by its unique sales order id.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure Bearer (JWT) authorization: bearerAuth
+$config = kruegge82\otto\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new kruegge82\otto\Api\OrdersV4Api(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$sales_order_id = 'sales_order_id_example'; // string
+
+try {
+    $result = $apiInstance->ordersV4GetPartnerOrderBySalesOrderId($sales_order_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling OrdersV4Api->ordersV4GetPartnerOrderBySalesOrderId: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **sales_order_id** | **string**|  | |
+
+### Return type
+
+[**\kruegge82\otto\Model\PartnerOrderOrdersV4**](../Model/PartnerOrderOrdersV4.md)
+
+### Authorization
+
+[bearerAuth](../../README.md#bearerAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
