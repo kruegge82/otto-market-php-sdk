@@ -1419,7 +1419,7 @@ class ShipmentsV1Api
      *
      * Retrieve shipments.
      *
-     * @param  string $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
+     * @param  \DateTime $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
      * @param  int|null $limit The maximum number of shipments to be returned in each response. (optional, default to 25)
      * @param  string|null $next The cursor which points to the next shipment that should be queried. It is used to paginate the results. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ListShipmentsUsingGET'] to see the possible values for this operation
@@ -1439,7 +1439,7 @@ class ShipmentsV1Api
      *
      * Retrieve shipments.
      *
-     * @param  string $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
+     * @param  \DateTime $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
      * @param  int|null $limit The maximum number of shipments to be returned in each response. (optional, default to 25)
      * @param  string|null $next The cursor which points to the next shipment that should be queried. It is used to paginate the results. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ListShipmentsUsingGET'] to see the possible values for this operation
@@ -1554,7 +1554,7 @@ class ShipmentsV1Api
      *
      * Retrieve shipments.
      *
-     * @param  string $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
+     * @param  \DateTime $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
      * @param  int|null $limit The maximum number of shipments to be returned in each response. (optional, default to 25)
      * @param  string|null $next The cursor which points to the next shipment that should be queried. It is used to paginate the results. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ListShipmentsUsingGET'] to see the possible values for this operation
@@ -1577,7 +1577,7 @@ class ShipmentsV1Api
      *
      * Retrieve shipments.
      *
-     * @param  string $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
+     * @param  \DateTime $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
      * @param  int|null $limit The maximum number of shipments to be returned in each response. (optional, default to 25)
      * @param  string|null $next The cursor which points to the next shipment that should be queried. It is used to paginate the results. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ListShipmentsUsingGET'] to see the possible values for this operation
@@ -1629,7 +1629,7 @@ class ShipmentsV1Api
     /**
      * Create request for operation 'shipmentsV1ListShipmentsUsingGET'
      *
-     * @param  string $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
+     * @param  \DateTime $datefrom Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. (required)
      * @param  int|null $limit The maximum number of shipments to be returned in each response. (optional, default to 25)
      * @param  string|null $next The cursor which points to the next shipment that should be queried. It is used to paginate the results. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['shipmentsV1ListShipmentsUsingGET'] to see the possible values for this operation

@@ -58,7 +58,7 @@ class ProductDeliveryInformationRequestDTOAvailabilityV1 implements ModelInterfa
      */
     protected static $openAPITypes = [
         'shipping_profile_id' => 'string',
-        'processing_time' => 'string',
+        'processing_time' => '\DateTime',
         'sku' => 'string'
     ];
 
@@ -71,7 +71,7 @@ class ProductDeliveryInformationRequestDTOAvailabilityV1 implements ModelInterfa
      */
     protected static $openAPIFormats = [
         'shipping_profile_id' => null,
-        'processing_time' => '[1..99] or DEFAULT',
+        'processing_time' => 'date-time',
         'sku' => null
     ];
 
@@ -342,7 +342,7 @@ class ProductDeliveryInformationRequestDTOAvailabilityV1 implements ModelInterfa
     /**
      * Gets processing_time
      *
-     * @return string
+     * @return \DateTime
      */
     public function getProcessingTime()
     {
@@ -352,7 +352,7 @@ class ProductDeliveryInformationRequestDTOAvailabilityV1 implements ModelInterfa
     /**
      * Sets processing_time
      *
-     * @param string $processing_time The processingTime of a specific SKU, which can be any value between 1 and 99 or 'DEFAULT'. <br> When it is set to DEFAULT the defaultProcessingTime used in the shipping profile will be considered <br> Otherwise the defaultProcessingTime is overwritten and is not reset even if the shipping profile is changed. <br> It describes the time the partner needs to prepare the order for a shipment.
+     * @param \DateTime $processing_time The processingTime of a specific SKU, which can be any value between 1 and 99 or 'DEFAULT'. <br> When it is set to DEFAULT the defaultProcessingTime used in the shipping profile will be considered <br> Otherwise the defaultProcessingTime is overwritten and is not reset even if the shipping profile is changed. <br> It describes the time the partner needs to prepare the order for a shipment.
      *
      * @return self
      */

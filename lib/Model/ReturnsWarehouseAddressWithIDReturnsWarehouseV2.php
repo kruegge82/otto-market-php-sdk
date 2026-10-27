@@ -393,10 +393,6 @@ class ReturnsWarehouseAddressWithIDReturnsWarehouseV2 implements ModelInterface,
         if ($this->container['return_address_id'] === null) {
             $invalidProperties[] = "'return_address_id' can't be null";
         }
-        if (!preg_match("/UUID4 string/", $this->container['return_address_id'])) {
-            $invalidProperties[] = "invalid value for 'return_address_id', must be conform to the pattern /UUID4 string/.";
-        }
-
         if ($this->container['return_warehouse_type'] === null) {
             $invalidProperties[] = "'return_warehouse_type' can't be null";
         }
@@ -458,11 +454,6 @@ class ReturnsWarehouseAddressWithIDReturnsWarehouseV2 implements ModelInterface,
         if (is_null($return_address_id)) {
             throw new \InvalidArgumentException('non-nullable return_address_id cannot be null');
         }
-
-        if ((!preg_match("/UUID4 string/", ObjectSerializer::toString($return_address_id)))) {
-            throw new \InvalidArgumentException("invalid value for \$return_address_id when calling ReturnsWarehouseAddressWithIDReturnsWarehouseV2., must conform to the pattern /UUID4 string/.");
-        }
-
         $this->container['return_address_id'] = $return_address_id;
 
         return $this;

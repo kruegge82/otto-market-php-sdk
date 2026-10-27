@@ -277,10 +277,6 @@ class ReturnCarrierResponseReturnsWarehouseV2 implements ModelInterface, ArrayAc
         if ($this->container['return_address_carrier_id'] === null) {
             $invalidProperties[] = "'return_address_carrier_id' can't be null";
         }
-        if (!preg_match("/UUID4 string/", $this->container['return_address_carrier_id'])) {
-            $invalidProperties[] = "invalid value for 'return_address_carrier_id', must be conform to the pattern /UUID4 string/.";
-        }
-
         return $invalidProperties;
     }
 
@@ -318,11 +314,6 @@ class ReturnCarrierResponseReturnsWarehouseV2 implements ModelInterface, ArrayAc
         if (is_null($return_address_carrier_id)) {
             throw new \InvalidArgumentException('non-nullable return_address_carrier_id cannot be null');
         }
-
-        if ((!preg_match("/UUID4 string/", ObjectSerializer::toString($return_address_carrier_id)))) {
-            throw new \InvalidArgumentException("invalid value for \$return_address_carrier_id when calling ReturnCarrierResponseReturnsWarehouseV2., must conform to the pattern /UUID4 string/.");
-        }
-
         $this->container['return_address_carrier_id'] = $return_address_carrier_id;
 
         return $this;

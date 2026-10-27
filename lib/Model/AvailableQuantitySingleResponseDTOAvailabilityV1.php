@@ -57,7 +57,7 @@ class AvailableQuantitySingleResponseDTOAvailabilityV1 implements ModelInterface
      * @var string[]
      */
     protected static $openAPITypes = [
-        'last_modified' => 'string',
+        'last_modified' => '\DateTime',
         'quantity' => 'int',
         'sku' => 'string'
     ];
@@ -70,7 +70,7 @@ class AvailableQuantitySingleResponseDTOAvailabilityV1 implements ModelInterface
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'last_modified' => 'YYYY-MM-DD'T'HH:mm:ss.SSS'Z'',
+        'last_modified' => 'date-time',
         'quantity' => 'int64',
         'sku' => null
     ];
@@ -323,7 +323,7 @@ class AvailableQuantitySingleResponseDTOAvailabilityV1 implements ModelInterface
     /**
      * Gets last_modified
      *
-     * @return string
+     * @return \DateTime
      */
     public function getLastModified()
     {
@@ -333,7 +333,7 @@ class AvailableQuantitySingleResponseDTOAvailabilityV1 implements ModelInterface
     /**
      * Sets last_modified
      *
-     * @param string $last_modified The last modified date and time of available quantity as a ISO8601 format (yyyy-MM-dd'T'HH:mm:ss.SSSX).
+     * @param \DateTime $last_modified The last modified date and time of available quantity as a ISO8601 format (yyyy-MM-dd'T'HH:mm:ss.SSSX).
      *
      * @return self
      */

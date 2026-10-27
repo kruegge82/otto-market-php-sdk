@@ -286,7 +286,7 @@ $apiInstance = new kruegge82\otto\Api\ShipmentsV1Api(
     new GuzzleHttp\Client(),
     $config
 );
-$datefrom = 'datefrom_example'; // string | Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (`YYYY-MM-DD`), which will be inferred to be in UTC time, or an ISO date time (`YYYY-MM-DD'T'HH:mm:ss.SSSXXX`).  For example, `2024-01-10` would be interpreted the same as `2024-01-10T00:00:00Z`.
+$datefrom = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (`YYYY-MM-DD`), which will be inferred to be in UTC time, or an ISO date time (`YYYY-MM-DD'T'HH:mm:ss.SSSXXX`).  For example, `2024-01-10` would be interpreted the same as `2024-01-10T00:00:00Z`.
 $limit = 25; // int | The maximum number of shipments to be returned in each response.
 $next = 'next_example'; // string | The cursor which points to the next shipment that should be queried. It is used to paginate the results.
 
@@ -302,7 +302,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **datefrom** | **string**| Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. | |
+| **datefrom** | **\DateTime**| Shipments created from this date onwards for the given authorized partner will be returned. Can be specified as either an ISO date (&#x60;YYYY-MM-DD&#x60;), which will be inferred to be in UTC time, or an ISO date time (&#x60;YYYY-MM-DD&#39;T&#39;HH:mm:ss.SSSXXX&#x60;).  For example, &#x60;2024-01-10&#x60; would be interpreted the same as &#x60;2024-01-10T00:00:00Z&#x60;. | |
 | **limit** | **int**| The maximum number of shipments to be returned in each response. | [optional] [default to 25] |
 | **next** | **string**| The cursor which points to the next shipment that should be queried. It is used to paginate the results. | [optional] |
 

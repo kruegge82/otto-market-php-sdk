@@ -54,7 +54,7 @@ $apiInstance = new kruegge82\otto\Api\ProductsV5Api(
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // string | Holds the optional client side update request timestamp, in ISO DateTime format
+$x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // \DateTime | Holds the optional client side update request timestamp, in ISO DateTime format
 $product_variation_products_v5 = array(new \kruegge82\otto\Model\ProductVariationProductsV5()); // \kruegge82\otto\Model\ProductVariationProductsV5[]
 
 try {
@@ -69,7 +69,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
+| **x_request_timestamp** | **\DateTime**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
 | **product_variation_products_v5** | [**\kruegge82\otto\Model\ProductVariationProductsV5[]**](../Model/ProductVariationProductsV5.md)|  | [optional] |
 
 ### Return type
@@ -1148,7 +1148,7 @@ $apiInstance = new kruegge82\otto\Api\ProductsV5Api(
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // string | Holds the optional client side update request timestamp, in ISO DateTime format
+$x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // \DateTime | Holds the optional client side update request timestamp, in ISO DateTime format
 $active_status_list_request_products_v5 = new \kruegge82\otto\Model\ActiveStatusListRequestProductsV5(); // \kruegge82\otto\Model\ActiveStatusListRequestProductsV5
 
 try {
@@ -1163,7 +1163,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
+| **x_request_timestamp** | **\DateTime**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
 | **active_status_list_request_products_v5** | [**\kruegge82\otto\Model\ActiveStatusListRequestProductsV5**](../Model/ActiveStatusListRequestProductsV5.md)|  | [optional] |
 
 ### Return type
@@ -1210,7 +1210,7 @@ $apiInstance = new kruegge82\otto\Api\ProductsV5Api(
     new GuzzleHttp\Client(),
     $config
 );
-$x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // string | Holds the optional client side update request timestamp, in ISO DateTime format
+$x_request_timestamp = 2000-10-31T01:30:10.000-05:00; // \DateTime | Holds the optional client side update request timestamp, in ISO DateTime format
 $sku_pricing_products_v5 = array(new \kruegge82\otto\Model\SkuPricingProductsV5()); // \kruegge82\otto\Model\SkuPricingProductsV5[]
 
 try {
@@ -1225,7 +1225,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **x_request_timestamp** | **string**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
+| **x_request_timestamp** | **\DateTime**| Holds the optional client side update request timestamp, in ISO DateTime format | [optional] |
 | **sku_pricing_products_v5** | [**\kruegge82\otto\Model\SkuPricingProductsV5[]**](../Model/SkuPricingProductsV5.md)|  | [optional] |
 
 ### Return type

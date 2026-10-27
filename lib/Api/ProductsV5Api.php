@@ -184,7 +184,7 @@ class ProductsV5Api
      *
      * Create or update product variations
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ProductVariationProductsV5[]|null $product_variation_products_v5 product_variation_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
@@ -203,7 +203,7 @@ class ProductsV5Api
      *
      * Create or update product variations
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ProductVariationProductsV5[]|null $product_variation_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
@@ -289,7 +289,7 @@ class ProductsV5Api
      *
      * Create or update product variations
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ProductVariationProductsV5[]|null $product_variation_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
@@ -311,7 +311,7 @@ class ProductsV5Api
      *
      * Create or update product variations
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ProductVariationProductsV5[]|null $product_variation_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
@@ -362,7 +362,7 @@ class ProductsV5Api
     /**
      * Create request for operation 'productsV5CreateOrUpdateProductVariations'
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ProductVariationProductsV5[]|null $product_variation_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5CreateOrUpdateProductVariations'] to see the possible values for this operation
      *
@@ -5368,7 +5368,7 @@ class ProductsV5Api
      *
      * Update active status
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ActiveStatusListRequestProductsV5|null $active_status_list_request_products_v5 active_status_list_request_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateActiveStatus'] to see the possible values for this operation
      *
@@ -5387,7 +5387,7 @@ class ProductsV5Api
      *
      * Update active status
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ActiveStatusListRequestProductsV5|null $active_status_list_request_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateActiveStatus'] to see the possible values for this operation
      *
@@ -5473,7 +5473,7 @@ class ProductsV5Api
      *
      * Update active status
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ActiveStatusListRequestProductsV5|null $active_status_list_request_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateActiveStatus'] to see the possible values for this operation
      *
@@ -5495,7 +5495,7 @@ class ProductsV5Api
      *
      * Update active status
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ActiveStatusListRequestProductsV5|null $active_status_list_request_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateActiveStatus'] to see the possible values for this operation
      *
@@ -5546,7 +5546,7 @@ class ProductsV5Api
     /**
      * Create request for operation 'productsV5UpdateActiveStatus'
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\ActiveStatusListRequestProductsV5|null $active_status_list_request_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateActiveStatus'] to see the possible values for this operation
      *
@@ -5651,7 +5651,7 @@ class ProductsV5Api
      *
      * Update product variation prices
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\SkuPricingProductsV5[]|null $sku_pricing_products_v5 sku_pricing_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateProductVariationPrices'] to see the possible values for this operation
      *
@@ -5670,7 +5670,7 @@ class ProductsV5Api
      *
      * Update product variation prices
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\SkuPricingProductsV5[]|null $sku_pricing_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateProductVariationPrices'] to see the possible values for this operation
      *
@@ -5756,7 +5756,7 @@ class ProductsV5Api
      *
      * Update product variation prices
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\SkuPricingProductsV5[]|null $sku_pricing_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateProductVariationPrices'] to see the possible values for this operation
      *
@@ -5778,7 +5778,7 @@ class ProductsV5Api
      *
      * Update product variation prices
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\SkuPricingProductsV5[]|null $sku_pricing_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateProductVariationPrices'] to see the possible values for this operation
      *
@@ -5829,7 +5829,7 @@ class ProductsV5Api
     /**
      * Create request for operation 'productsV5UpdateProductVariationPrices'
      *
-     * @param  string|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
+     * @param  \DateTime|null $x_request_timestamp Holds the optional client side update request timestamp, in ISO DateTime format (optional)
      * @param  \kruegge82\otto\Model\SkuPricingProductsV5[]|null $sku_pricing_products_v5 (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productsV5UpdateProductVariationPrices'] to see the possible values for this operation
      *

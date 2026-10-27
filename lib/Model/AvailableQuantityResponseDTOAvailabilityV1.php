@@ -57,7 +57,7 @@ class AvailableQuantityResponseDTOAvailabilityV1 implements ModelInterface, Arra
      * @var string[]
      */
     protected static $openAPITypes = [
-        'last_modified' => 'string',
+        'last_modified' => '\DateTime',
         'quantity' => 'int',
         'sku' => 'string',
         'links' => '\kruegge82\otto\Model\LinkAvailabilityV1[]'
@@ -71,7 +71,7 @@ class AvailableQuantityResponseDTOAvailabilityV1 implements ModelInterface, Arra
      * @psalm-var array<string, string|null>
      */
     protected static $openAPIFormats = [
-        'last_modified' => 'YYYY-MM-DD'T'HH:mm:ss.SSS'Z'',
+        'last_modified' => 'date-time',
         'quantity' => 'int64',
         'sku' => null,
         'links' => null
@@ -333,7 +333,7 @@ class AvailableQuantityResponseDTOAvailabilityV1 implements ModelInterface, Arra
     /**
      * Gets last_modified
      *
-     * @return string
+     * @return \DateTime
      */
     public function getLastModified()
     {
@@ -343,7 +343,7 @@ class AvailableQuantityResponseDTOAvailabilityV1 implements ModelInterface, Arra
     /**
      * Sets last_modified
      *
-     * @param string $last_modified The last modified date and time of available quantity in a ISO8601 format
+     * @param \DateTime $last_modified The last modified date and time of available quantity in a ISO8601 format
      *
      * @return self
      */

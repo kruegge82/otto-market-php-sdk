@@ -284,10 +284,6 @@ class CreateShippingProfileResponseShippingProfilesV1 implements ModelInterface,
         if ($this->container['shipping_profile_id'] === null) {
             $invalidProperties[] = "'shipping_profile_id' can't be null";
         }
-        if (!preg_match("/UUID4 string/", $this->container['shipping_profile_id'])) {
-            $invalidProperties[] = "invalid value for 'shipping_profile_id', must be conform to the pattern /UUID4 string/.";
-        }
-
         if ($this->container['message'] === null) {
             $invalidProperties[] = "'message' can't be null";
         }
@@ -328,11 +324,6 @@ class CreateShippingProfileResponseShippingProfilesV1 implements ModelInterface,
         if (is_null($shipping_profile_id)) {
             throw new \InvalidArgumentException('non-nullable shipping_profile_id cannot be null');
         }
-
-        if ((!preg_match("/UUID4 string/", ObjectSerializer::toString($shipping_profile_id)))) {
-            throw new \InvalidArgumentException("invalid value for \$shipping_profile_id when calling CreateShippingProfileResponseShippingProfilesV1., must conform to the pattern /UUID4 string/.");
-        }
-
         $this->container['shipping_profile_id'] = $shipping_profile_id;
 
         return $this;
